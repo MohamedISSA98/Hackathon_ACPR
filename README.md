@@ -6,11 +6,11 @@ Ce projet consiste à produire un rapport synthéthique de deux documents SRCF d
 
 ## Contenu du projet
 
-# data
+### data
 Les rapports SRCF
 
-# generated_files
+### generated_files
 Les résumés et rapports générés
 
-# notebooks
+### notebooks
 'resumes.ipynb' contient les étapes suivis pour générer le rapport final sous le format souhaité.
