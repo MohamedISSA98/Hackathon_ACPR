@@ -25,18 +25,21 @@ def main():
     # Vérification de l'existence des deux fichiers PDF
     if uploaded_file_n is not None and uploaded_file_n_minus_1 is not None:
         # Bouton pour déclencher l'extraction du texte
-        if st.button("Extraire le texte"):
+        if st.button("Générer la fiche synthèse"):
             # Extraction du texte des deux fichiers PDF en utilisant la fonction définie précédemment
-            text_n = extract_text_from_pdf(uploaded_file_n)
-            text_n_minus_1 = extract_text_from_pdf(uploaded_file_n_minus_1)
+            # text_n = extract_text_from_pdf(uploaded_file_n)
+            # text_n_minus_1 = extract_text_from_pdf(uploaded_file_n_minus_1)
             
             # Affichage du texte extrait dans deux encarts distincts
-            st.subheader("Texte extrait du SFCR année N:")
-            st.write(text_n)
+            # st.subheader("Texte extrait du SFCR année N:")
+            # st.write(text_n)
 
-            st.subheader("Texte extrait du SFCR année N-1:")
-            st.write(text_n_minus_1)
-
+            # st.subheader("Texte extrait du SFCR année N-1:")
+            # st.write(text_n_minus_1)
+            with open('generated_files/report_2.txt', 'r') as f:
+                text = f.read()
+            st.subheader("Fiche Synthétique:")
+            st.write(text)
 # Exécution de la fonction principale lorsque le script est lancé
 if __name__ == "__main__":
     main()
